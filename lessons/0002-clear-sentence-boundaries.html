@@ -2,12 +2,14 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#547866">
   <title>第2课：把一长串意思切成清楚的句子</title>
   <link rel="stylesheet" href="../assets/course.css">
 </head>
-<body>
-<main>
+<body data-page="lesson-0002">
+<a class="skip-link" href="#content">跳到主要内容</a>
+<main id="content">
+  <nav class="top-nav" aria-label="页面导航"><a href="../index.html">⌂ 课程主页</a><span>第 2 课 · 进行中</span></nav>
   <div class="eyebrow">Lesson 0002 · Day 2 · 15–20 min</div>
   <h1>一句只扛一个核心意思</h1>
   <p class="lead">今天的胜利：把昨天那条很长的句子，切成 4 个读者一眼能跟上的完整句子。</p>
@@ -20,7 +22,8 @@
   <h2>1. 先从记忆里拿回来（2 分钟）</h2>
   <section class="card task">
     <p>不看第1课答案：写作四项评分标准是什么？</p>
-    <textarea rows="3" placeholder="先写，再继续"></textarea>
+    <textarea id="recall" rows="3" placeholder="先写，再继续"></textarea>
+    <p class="save-note" data-save-note aria-live="polite"></p>
   </section>
 
   <h2>2. 认出完整句（3 分钟）</h2>
@@ -44,7 +47,7 @@
     <p>把下面一串话改成 3–4 个完整句。允许重复简单词；今天只守句子边界。</p>
     <p><em>I want to pass an exam because I can return to school and learn new skills I study online every day ChatGPT also helps me review what I learn</em></p>
     <textarea id="rewrite" rows="6" placeholder="在这里写 3–4 句"></textarea>
-    <button onclick="copyAnswer()">复制答案给哥哥</button>
+    <button onclick="copyAnswer()">复制第 2 课学习反馈卡</button>
     <p id="status" class="small"></p>
   </section>
 
@@ -59,12 +62,15 @@
   </section>
 
   <p><strong>本课主来源：</strong><a href="https://ielts.org/take-a-test/preparation-resources/writing-test-resources">IELTS 官方 Writing preparation resources：Grammatical Range and Accuracy</a></p>
-  <footer><a href="0001-ielts-baseline.html">← 第1课</a> · <a href="../reference/scoring-card.html">评分速查卡</a> · <a href="../reference/course-roadmap.html">课程路线图</a></footer>
+  <footer>课程资料：<a href="../reference/scoring-card.html">评分速查卡</a> · <a href="../reference/course-roadmap.html">课程路线图</a></footer>
 </main>
+<nav class="lesson-nav" aria-label="课程前后导航"><a href="0001-ielts-baseline.html">← 第 1 课</a><a class="home" href="../index.html">⌂ 主页</a><span class="next disabled" title="完成本课反馈后，哥哥会按你的表现生成下一课">下一课待解锁</span></nav>
+<script src="../assets/course.js"></script>
 <script>
 function copyAnswer(){
   const value=document.getElementById('rewrite').value.trim();
-  const text='【第2课·切句练习】\n'+(value||'未填写');
+  const recall=document.getElementById('recall').value.trim();
+  const text='【第2课·学习反馈卡】\n\n【评分标准回忆】\n'+(recall||'未填写')+'\n\n【切句练习】\n'+(value||'未填写');
   navigator.clipboard.writeText(text).then(()=>document.getElementById('status').textContent='已复制，回 Remote 发给哥哥。').catch(()=>document.getElementById('status').textContent='未获得复制权限，请长按选中文字。');
 }
 </script>
