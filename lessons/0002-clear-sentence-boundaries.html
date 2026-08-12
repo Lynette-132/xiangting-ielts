@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>第2课：把一长串意思切成清楚的句子</title>
+  <link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<main>
+  <div class="eyebrow">Lesson 0002 · Day 2 · 15–20 min</div>
+  <h1>一句只扛一个核心意思</h1>
+  <p class="lead">今天的胜利：把昨天那条很长的句子，切成 4 个读者一眼能跟上的完整句子。</p>
+
+  <section class="card win">
+    <h2>为什么先练这个</h2>
+    <p>你昨天有清楚的观点和理由，但多个意思被逗号串在一起。IELTS 官方说明：标点必须让读者清楚看出一句从哪里开始、在哪里结束；语法评分也看句子的准确性。</p>
+  </section>
+
+  <h2>1. 先从记忆里拿回来（2 分钟）</h2>
+  <section class="card task">
+    <p>不看第1课答案：写作四项评分标准是什么？</p>
+    <textarea rows="3" placeholder="先写，再继续"></textarea>
+  </section>
+
+  <h2>2. 认出完整句（3 分钟）</h2>
+  <section class="card">
+    <p>今天只用一个判断：<strong>一句话至少要有“谁/什么 + 做什么/是什么”。</strong></p>
+    <div class="grid">
+      <div class="card"><span class="pill">完整</span><p><strong>A stable job gives me security.</strong></p><p class="small">什么：a stable job<br>做什么：gives</p></div>
+      <div class="card"><span class="pill">未完整</span><p><strong>Because it gives me security.</strong></p><p class="small">Because 把它变成了依附于主句的理由。</p></div>
+    </div>
+  </section>
+
+  <h2>3. 给昨天的句子“切气口”（5 分钟）</h2>
+  <section class="card task">
+    <p>不要先改高级词。只在意思结束处加句号，再把下一句首字母大写。</p>
+    <blockquote>I agree that a stable job is more important. A stable job makes me feel secure. I can receive a regular income every month. Then I can use some of that money to explore an interesting side job.</blockquote>
+    <p class="small">注意：这里不是让你背范文，而是在看“观点—安全感—收入—副业”四个核心意思如何各自站稳。</p>
+  </section>
+
+  <h2>4. 你来切句（5 分钟）</h2>
+  <section class="card task">
+    <p>把下面一串话改成 3–4 个完整句。允许重复简单词；今天只守句子边界。</p>
+    <p><em>I want to pass an exam because I can return to school and learn new skills I study online every day ChatGPT also helps me review what I learn</em></p>
+    <textarea id="rewrite" rows="6" placeholder="在这里写 3–4 句"></textarea>
+    <button onclick="copyAnswer()">复制答案给哥哥</button>
+    <p id="status" class="small"></p>
+  </section>
+
+  <h2>5. 20 秒自检</h2>
+  <section class="card win">
+    <ol>
+      <li>每句都有“谁/什么 + 做什么/是什么”吗？</li>
+      <li>一个核心意思说完后，有句号吗？</li>
+      <li>句号后的第一个字母大写了吗？</li>
+    </ol>
+    <p>完成后回到 ChatGPT，把答案发给哥哥。哥哥只反馈句子边界，然后请你立即重写一次。</p>
+  </section>
+
+  <p><strong>本课主来源：</strong><a href="https://ielts.org/take-a-test/preparation-resources/writing-test-resources">IELTS 官方 Writing preparation resources：Grammatical Range and Accuracy</a></p>
+  <footer><a href="0001-ielts-baseline.html">← 第1课</a> · <a href="../reference/scoring-card.html">评分速查卡</a> · <a href="../reference/course-roadmap.html">课程路线图</a></footer>
+</main>
+<script>
+function copyAnswer(){
+  const value=document.getElementById('rewrite').value.trim();
+  const text='【第2课·切句练习】\n'+(value||'未填写');
+  navigator.clipboard.writeText(text).then(()=>document.getElementById('status').textContent='已复制，回 Remote 发给哥哥。').catch(()=>document.getElementById('status').textContent='未获得复制权限，请长按选中文字。');
+}
+</script>
+</body>
+</html>
