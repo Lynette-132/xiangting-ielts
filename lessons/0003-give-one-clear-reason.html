@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#547866">
+  <title>第3课：用 because 给出一个清楚的理由</title>
+  <link rel="stylesheet" href="../assets/course.css">
+</head>
+<body data-page="lesson-0003">
+<a class="skip-link" href="#content">跳到主要内容</a>
+<main id="content">
+  <nav class="top-nav" aria-label="页面导航"><a href="../index.html">⌂ 课程主页</a><span>第 3 课 · 进行中</span></nav>
+  <div class="eyebrow">Lesson 0003 · Day 3 · 15–20 min</div>
+  <h1>观点后面，跟一个真正的理由</h1>
+  <p class="lead">今天的胜利：用 <em>because</em> 把“我怎么想”和“为什么”连成一个完整、清楚的句子。</p>
+
+  <section class="card win">
+    <h2>为什么接着练这个</h2>
+    <p>你已经能把连续意思切成完整句。下一步不是堆高级词，而是在清楚句界的基础上，让一个观点得到一个直接理由。这同时服务于写作的“任务回应”和“连贯与衔接”。</p>
+  </section>
+
+  <h2>1. 间隔复习：先切句（2 分钟）</h2>
+  <section class="card task">
+    <p>不看第2课，把下面内容切成两个完整句。只改标点和大小写。</p>
+    <p><em>I study English every day it gives me more choices</em></p>
+    <textarea id="boundaryRecall" rows="3" placeholder="写成两个完整句"></textarea>
+    <details><summary>写完再核对</summary><p>I study English every day. It gives me more choices.</p></details>
+    <p class="save-note" data-save-note aria-live="polite"></p>
+  </section>
+
+  <h2>2. 今天只用一个结构（3 分钟）</h2>
+  <section class="card">
+    <p><strong>观点 + because + 原因</strong></p>
+    <blockquote>I want to improve my English because it gives me more choices.</blockquote>
+    <p class="small">观点：I want to improve my English<br>原因：it gives me more choices</p>
+    <p>当 <em>because</em> 放在句子中间连接直接理由时，前面通常不加逗号：</p>
+    <p><span class="pill">正确</span> I study online because it is convenient.</p>
+    <p><span class="pill">今天不写</span> I study online, because it is convenient.</p>
+  </section>
+
+  <h2>3. 认出“理由”（3 分钟）</h2>
+  <section class="card task">
+    <p>哪个后半句真正回答了“为什么想通过考试”？先在心里选择，再展开答案。</p>
+    <ol>
+      <li>I want to pass the exam because it is an exam.</li>
+      <li>I want to pass the exam because I want to return to school.</li>
+    </ol>
+    <details><summary>查看答案</summary><p>第 2 句。它提供了具体动机；第 1 句只是重复题目，没有解释原因。</p></details>
+  </section>
+
+  <h2>4. 你来写（6 分钟）</h2>
+  <section class="card task">
+    <p>任选下面一个开头，用 <em>because</em> 写一个完整句。理由必须回答“为什么”，不追求高级词。</p>
+    <ul><li>I want a stable job ...</li><li>I study English every day ...</li><li>I want to return to school ...</li></ul>
+    <textarea id="reasonSentence" rows="4" placeholder="写 1 个观点 + because + 1 个理由"></textarea>
+  </section>
+
+  <h2>5. 20 秒自检与交作业</h2>
+  <section class="card win">
+    <ol>
+      <li><em>because</em> 前面是一个观点吗？</li>
+      <li><em>because</em> 后面真的回答“为什么”了吗？</li>
+      <li><em>because</em> 前有没有多余的逗号？</li>
+      <li>整句结尾有没有英文句号？</li>
+    </ol>
+    <button onclick="copyAnswer()">复制第 3 课学习反馈卡</button>
+    <p id="status" class="small" aria-live="polite"></p>
+    <p>把反馈卡发给哥哥。哥哥只反馈“理由是否成立”和句子边界，然后请你立即重写一次。</p>
+  </section>
+
+  <p><strong>本课主来源：</strong><a href="https://ielts.org/take-a-test/preparation-resources/writing-test-resources">IELTS 官方 Writing preparation resources</a>：写作同时评估任务回应、连贯衔接与语法准确性。</p>
+  <p>任何题意或句子不清楚，都直接问哥哥，不需要自己卡住。</p>
+  <footer>课程资料：<a href="../reference/scoring-card.html">评分速查卡</a> · <a href="../reference/course-roadmap.html">课程路线图</a></footer>
+</main>
+<nav class="lesson-nav" aria-label="课程前后导航"><a href="0002-clear-sentence-boundaries.html">← 第 2 课</a><a class="home" href="../index.html">⌂ 主页</a><span class="next disabled" title="完成本课反馈后，哥哥会按你的表现生成下一课">下一课待解锁</span></nav>
+<script src="../assets/course.js"></script>
+<script>
+function copyAnswer(){
+  const boundary=document.getElementById('boundaryRecall').value.trim();
+  const reason=document.getElementById('reasonSentence').value.trim();
+  const text='【第3课·学习反馈卡】\n\n【第2课间隔复习】\n'+(boundary||'未填写')+'\n\n【because 理由句】\n'+(reason||'未填写');
+  navigator.clipboard.writeText(text).then(()=>document.getElementById('status').textContent='已复制，回聊天发给哥哥。').catch(()=>document.getElementById('status').textContent='未获得复制权限，请手动选中文字。');
+}
+</script>
+</body>
+</html>
