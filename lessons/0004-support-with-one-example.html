@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#547866">
+  <title>第4课：用一个例子支撑理由</title>
+  <link rel="stylesheet" href="../assets/course.css">
+</head>
+<body data-page="lesson-0004">
+<a class="skip-link" href="#content">跳到主要内容</a>
+<main id="content">
+  <nav class="top-nav" aria-label="页面导航"><a href="../index.html">⌂ 课程主页</a><span>第 4 课 · 进行中</span></nav>
+  <div class="eyebrow">Lesson 0004 · Day 4 · 15–20 min</div>
+  <h1>理由后面，再放一个看得见的例子</h1>
+  <p class="lead">今天的胜利：在“观点＋理由”后，用 <em>For example</em> 补一个具体例子。</p>
+  <section class="card win">
+    <p><strong>注意：自动保存不等于已经提交。</strong>网页答案只保存在这台 iPad；哥哥看不到，直到你复制反馈卡并粘贴到聊天。</p>
+    <p>你已经会用 <em>because</em> 回答“为什么”。这一课只向前走一步：让读者看见这个理由在现实中是什么样子。</p>
+  </section>
+  <h2>1. 间隔复习：先找理由（2 分钟）</h2>
+  <section class="card task">
+    <p>不看第3课，补全一句“观点＋具体理由”。</p>
+    <p><em>I study English every day because ...</em></p>
+    <textarea id="reasonRecall" rows="3" placeholder="because 后面写一个真正的理由"></textarea>
+    <details><summary>写完再看示例</summary><p>I study English every day because it gives me more choices.</p></details>
+    <p class="save-note" data-save-note aria-live="polite"></p>
+  </section>
+  <h2>2. 今天只加一个结构（3 分钟）</h2>
+  <section class="card">
+    <p><strong>观点 + because + 理由. For example, + 具体例子.</strong></p>
+    <blockquote>I study English every day because it gives me more choices. For example, I can apply for jobs that require English.</blockquote>
+    <p>理由是一般解释；例子是一个具体的人、行动或情境。<em>For example</em> 后面加英文逗号，例句本身要完整。</p>
+  </section>
+  <h2>3. 哪一句真的是例子？（3 分钟）</h2>
+  <section class="card task">
+    <p>先在心里选择，再展开答案。</p>
+    <ol><li>For example, English is important.</li><li>For example, I can read job advertisements written in English.</li></ol>
+    <details><summary>查看答案</summary><p>第 2 句。它给出了一个具体行动；第 1 句只是换一种方式重复观点。</p></details>
+  </section>
+  <h2>4. 你来补一个例子（7 分钟）</h2>
+  <section class="card task">
+    <p>保留下面前两句，再补一个具体例子。只写三句，不追求高级词。</p>
+    <blockquote>I want a stable job because a regular income makes me feel secure. For example, ...</blockquote>
+    <textarea id="exampleParagraph" rows="5" placeholder="写完整的三句话"></textarea>
+  </section>
+  <h2>5. 20 秒自检与交作业</h2>
+  <section class="card win">
+    <ol><li><em>because</em> 后面是否回答了“为什么”？</li><li><em>For example</em> 后面是否出现了具体行动或情境？</li><li>三句是否都用英文标点，并以大写字母开头？</li></ol>
+    <button onclick="copyAnswer()">复制反馈卡，回聊天提交（必须）</button>
+    <p id="status" class="small" aria-live="polite"></p>
+    <p>发给哥哥后，哥哥只检查“例子是否具体”和句子边界，再请你立即重写一次。</p>
+  </section>
+  <p><strong>本课主来源：</strong><a href="https://ielts.org/take-a-test/preparation-resources/writing-test-resources">IELTS 官方 Writing preparation resources</a>：写作会评估任务回应、连贯衔接与语法准确性。</p>
+  <p>任何题意或句子不清楚，都直接问哥哥，不需要自己卡住。</p>
+  <footer>课程资料：<a href="../reference/scoring-card.html">评分速查卡</a> · <a href="../reference/course-roadmap.html">课程路线图</a></footer>
+</main>
+<nav class="lesson-nav" aria-label="课程前后导航"><a href="0003-give-one-clear-reason.html">← 第 3 课</a><a class="home" href="../index.html">⌂ 主页</a><span class="next disabled" title="完成本课反馈后，哥哥会按你的表现生成下一课">下一课待解锁</span></nav>
+<script src="../assets/course.js"></script>
+<script>
+function copyAnswer(){
+  const recall=document.getElementById('reasonRecall').value.trim();
+  const example=document.getElementById('exampleParagraph').value.trim();
+  const text='【第4课·学习反馈卡】\n\n【第3课间隔复习】\n'+(recall||'未填写')+'\n\n【理由＋例子】\n'+(example||'未填写');
+  navigator.clipboard.writeText(text).then(()=>document.getElementById('status').textContent='已复制，回聊天发给哥哥。').catch(()=>document.getElementById('status').textContent='未获得复制权限，请手动选中文字。');
+}
+</script>
+</body>
+</html>
